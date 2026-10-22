@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: squishy
+  namespace: default
+  labels:
+    app: squishy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: squishy
+  template:
+    metadata:
+      labels:
+        app: squishy
+    spec:
+      containers:
+        - name: squishy
+          image: ghcr.io/g3941813-svg/squishy:603b87b
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 250m
+            limits:
+              memory: 512Mi
+              cpu: 500m
