@@ -19,7 +19,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: squishy
-          image: ghcr.io/g3941813-svg/squishy:0615a98
+          image: ghcr.io/g3941813-svg/squishy:cde0c59
           ports:
             - containerPort: 3000
           resources:
